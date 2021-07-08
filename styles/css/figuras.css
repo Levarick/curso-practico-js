@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -16,19 +15,12 @@ body {
 
 header {
   height: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(127deg, #0990ff, #0f018f);
-  -webkit-box-shadow: 0px 1px 10px #242526;
-          box-shadow: 0px 1px 10px #242526;
+  box-shadow: 0px 1px 10px #242526;
 }
 
 header > p {
@@ -46,25 +38,69 @@ header > h1 {
 }
 
 header div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 20px;
 }
 
 header img {
   width: 150px;
+}
+
+.basic {
+  margin: auto;
+  margin-top: 10px;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+section {
+  color: #242526;
+  display: grid;
+  height: 100%;
+  max-width: 320px;
+  padding: 10px;
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -5px black;
+  text-align: center;
+  min-height: 200px;
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background-color: #0990ff;
+}
+
+input {
+  height: 40px;
+  width: 60px;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
 }
 
 @media (min-width: 425px) {
@@ -74,14 +110,9 @@ header img {
 
   header div {
     width: 100%;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    justify-self: center;
+    justify-content: space-around;
+    flex-direction: row;
     max-width: 548px;
   }
 }
@@ -89,8 +120,18 @@ header img {
   header {
     height: 415px;
   }
+  .basic {
+    grid-template-columns: 1fr 1fr;
+  }
 
   header img {
     height: 30%;
   }
+}
+
+@media (min-width: 900px) {
+  .basic {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
 }
