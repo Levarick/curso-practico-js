@@ -17,6 +17,12 @@ function areaTriangulo(base, altura) {
   return (base * altura) / 2; 
 }
 
+function obtenerAltura(lado1, base) {
+  const cateto = base/2;
+  const hipotenusa = lado1;
+  return Math.sqrt(hipotenusa * hipotenusa - cateto * cateto);
+}
+
 // Código del circulo.
 
 function diametroCirculo(radio) {
@@ -60,10 +66,31 @@ function calcularPerimetroTriangulo() {
 
 
 function calcularAreaTriangulo() {
+  const input1 = document.getElementById("InputTriangulo1");
+  const input2 = document.getElementById("InputTriangulo2");
   const base = document.getElementById("InputTrianguloBase");
-  const altura = document.getElementById("InputTrianguloAltura");
-  const value1 = base.value;
-  const value2 = altura.value;
-  const area = areaTriangulo(value1, value2);
+  const value1 = parseInt(input1.value);
+  const value2 = parseInt(input2.value);
+  const value3 = parseInt(base.value);
+  if (value1 == value2) {
+    const altura = obtenerAltura(value1, value3);
+    const area = areaTriangulo(value3, altura);
+    alert(area);
+  } else {
+    alert("No es un tríangulo isoceles");
+  }
+}
+
+function calcularPerimetroCirculo() {
+  const radio = document.getElementById("InputCirculo");
+  const value = radio.value;
+  const perimetro = perimetroCirculo(value);
+  alert(perimetro);
+}
+
+function calcularAreaCirculo() {
+  const radio = document.getElementById("InputCirculo");
+  const value = radio.value;
+  const area = areaCirculo(value);
   alert(area);
 }
