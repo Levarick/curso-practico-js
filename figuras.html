@@ -24,16 +24,17 @@
     <h2>Taller #1</h2>
     <div class="basic">
       <section>
-        <h2>Calcula el área y perimetro de un cuadrado</h2>
+        <h3>Calcula el área y perimetro de un cuadrado</h3>
         <form action="">
           <label for="InputCuadrado">Escribe la medida de los lados de tu cuadrado</label>
           <input type="number" id="InputCuadrado" placeholder="Lado">
           <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
           <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+          <p id="ResultCuadrado"></p>
         </form>
       </section>
       <section>
-        <h2>Calcula el área y perimetro de un triangulo</h2>
+        <h3>Calcula el área y perimetro de un triangulo</h3>
         <form action="">
           <label for="InputTriangulo">Escribe la medida de los lados de tu triangulo</label>
           <input type="number" id="InputTriangulo1" placeholder="Lado 1">
@@ -41,19 +42,36 @@
           <input type="number" id="InputTrianguloBase" placeholder="Base">
           <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
           <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+          <p id="ResultTriangulo"></p>
         </form>
       </section>
       <section>
-        <h2>Calcula el área y perimetro de un circulo</h2>
+        <h3>Calcula el área y perimetro de un circulo</h3>
         <form action="">
           <label for="InputCiculo">Escribe la medida del radio de tu circulo</label>
           <input type="number" id="InputCirculo" placeholder="Radio">
           <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
           <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
+          <p id="ResultCirculo"></p>
+        </form>
+      </section>
+    </div>
+    <h2>Taller #2</h2>
+    <div class="intermediate">
+      <section>
+        <h3>Calcula un precio si le aplicas un descuento</h3>
+        <form action="">
+          <label for="InputPrice">Escribe el precio original:</label>
+          <input type="number" id="InputPrice" placeholder="Precio">
+          <label for="InputDiscount">Escribe el descuento:</label>
+          <input type="number" id="InputDiscount" placeholder="-%">
+          <button type="button" onclick="calcularDescuento()">Calcular el descuento</button>
+          <p id="ResultP"></p>
         </form>
       </section>
     </div>
   </main>
   <script src="./figuras.js"></script>
+  <script src="./descuentos.js"></script>
 </body>
 </html>
