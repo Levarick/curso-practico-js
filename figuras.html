@@ -26,7 +26,7 @@
       <section>
         <h3>Calcula el área y perimetro de un cuadrado</h3>
         <form action="">
-          <label for="InputCuadrado">Escribe la medida de los lados de tu cuadrado</label>
+          <label for="InputCuadrado">Escribe la medida de los lados de tu cuadrado:</label>
           <input type="number" id="InputCuadrado" placeholder="Lado">
           <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
           <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
@@ -36,7 +36,7 @@
       <section>
         <h3>Calcula el área y perimetro de un triangulo</h3>
         <form action="">
-          <label for="InputTriangulo">Escribe la medida de los lados de tu triangulo</label>
+          <label for="InputTriangulo">Escribe la medida de los lados de tu triangulo:</label>
           <input type="number" id="InputTriangulo1" placeholder="Lado 1">
           <input type="number" id="InputTriangulo2" placeholder="Lado 2">
           <input type="number" id="InputTrianguloBase" placeholder="Base">
@@ -48,7 +48,7 @@
       <section>
         <h3>Calcula el área y perimetro de un circulo</h3>
         <form action="">
-          <label for="InputCiculo">Escribe la medida del radio de tu circulo</label>
+          <label for="InputCiculo">Escribe la medida del radio de tu circulo:</label>
           <input type="number" id="InputCirculo" placeholder="Radio">
           <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
           <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
@@ -70,8 +70,30 @@
         </form>
       </section>
     </div>
+    <h2>Taller #3</h2>
+    <div class="average">
+      <section>
+        <h3>Calcula la media aritmética</h3>
+        <form action="">
+          <label for="InputLista">Introduce una serie de numeros separados por comas:</label>
+          <input type="text" id="InputLista" placeholder="Lista">
+          <button type="button" onclick="calcularMediaAritmetica()">Calcular medida</button>
+          <p id="ResultMediaA"></p>
+        </form>
+      </section>
+      <section>
+        <h3>Calcula la mediana</h3>
+        <form action="">
+          <label for="InputListaM">Introduce una serie de numeros separados por comas:</label>
+          <input type="text" id="InputListaM" placeholder="Lista">
+          <button type="button" onclick="calcularMediana()">Calcular medida</button>
+          <p id="ResultMediana"></p>
+        </form>
+      </section>
+    </div>
   </main>
   <script src="./figuras.js"></script>
   <script src="./descuentos.js"></script>
+  <script src="./promedios.js"></script>
 </body>
 </html>
