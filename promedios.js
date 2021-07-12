@@ -4,7 +4,6 @@ function calcularMedia(lista) {
       return parseInt(valorAcumulado) + parseInt(nuevoElemento);
     }
   );
-  console.log(sumaLista);
   const promedioLista = sumaLista / lista.length;
   return promedioLista;
 } 
