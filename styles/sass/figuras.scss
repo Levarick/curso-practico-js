@@ -90,7 +90,7 @@ p{
   header {
     height: 415px;
   }
-  .basic {
+  .basic, .average {
     grid-template-columns: 1fr 1fr;
   }
   header img {
@@ -99,7 +99,7 @@ p{
 }
 
 @media (min-width: 900px) {
-  .basic {
+  .basic, .average {
     grid-template-columns: 1fr 1fr 1fr;
   }
   

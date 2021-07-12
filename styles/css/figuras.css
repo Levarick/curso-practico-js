@@ -140,7 +140,7 @@ p {
     height: 415px;
   }
 
-  .basic {
+  .basic, .average {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -149,7 +149,7 @@ p {
   }
 }
 @media (min-width: 900px) {
-  .basic {
+  .basic, .average {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

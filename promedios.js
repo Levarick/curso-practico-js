@@ -20,7 +20,6 @@ function calcularMedianaM(lista) {
       return a - b;
     }
   );
-  console.log(arraySort);
   const middlePosition = parseInt(arraySort.length / 2);
   if ((arraySort.length % 2) === 0){
     mediana = (arraySort[middlePosition-1] + arraySort[middlePosition]) / 2
@@ -29,6 +28,27 @@ function calcularMedianaM(lista) {
   }
   return mediana;
 }
+
+function calcularModaM(lista) {
+  let listaCount = {};
+  lista.map(
+    function (elemento) {
+      var int = parseInt(elemento)
+      if (listaCount[int]) {
+        listaCount[int] += 1;
+      } else {
+        listaCount[int] = 1;
+      }
+    }
+  );
+  const listaArray = Object.entries(listaCount).sort( 
+    function (a, b) {
+      return a[1] - b[1];
+    }
+  );
+  return listaArray[listaArray.length - 1];
+}
+
 function calcularMediaAritmetica() {
   const lista = document.getElementById("InputLista");
   const result = document.getElementById("ResultMediaA");
@@ -45,4 +65,13 @@ function calcularMediana() {
   console.log(arrayLista);
   const mediana = calcularMedianaM(arrayLista);
   result.innerText = `La media aritmetica es: ${mediana}`;
+}
+
+function calcularModa() {
+  const lista = document.getElementById("InputListaMod");
+  const result = document.getElementById("ResultModa");
+  const arrayLista = lista.value.split(",");
+  const moda = calcularModaM(arrayLista);
+  result.innerText = `La media aritmetica es: ${moda[0]} y se repite ${moda[1]} veces`;
+
 }
